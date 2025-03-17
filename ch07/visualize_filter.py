@@ -1,4 +1,6 @@
 # coding: utf-8
+import sys, os
+sys.path.append(os.getcwd())  
 import numpy as np
 import matplotlib.pyplot as plt
 from simple_convnet import SimpleConvNet
@@ -24,5 +26,5 @@ network = SimpleConvNet()
 filter_show(network.params['W1'])
 
 # 学習後の重み
-network.load_params("params.pkl")
+network.load_params(os.getcwd()+"/ch07/params.pkl")
 filter_show(network.params['W1'])

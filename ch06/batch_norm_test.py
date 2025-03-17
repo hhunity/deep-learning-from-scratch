@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.getcwd())  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
@@ -57,6 +57,7 @@ def __train(weight_init_std):
 
 
 # 3.グラフの描画==========
+plt.rcParams["font.size"] = 6  # デフォルトのフォントサイズを小さくする
 weight_scale_list = np.logspace(0, -4, num=16)
 x = np.arange(max_epochs)
 

@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.getcwd())  # 親ディレクトリのファイルをインポートするための設定
 import pickle
 import numpy as np
 from collections import OrderedDict
